@@ -24,13 +24,32 @@ NOTE : Donot use any Global Variables
 
 //You can use this function ,for the actual recursion .Think of similar functions for all other problems.
 int count_pairs(char *str, int len, int start, int end){
-	return 0;
+	//static int count = 0;
+	if (end >= len ){
+		return 0;
+	}
+	else{
+		if (str[start] == str[end]){
+			return 1 + count_pairs(str, len, start + 1, end + 1);
+			//printf("\n chr1-%c chr2-%c count-%d start-%d end-%d", str[start], str[end], count, start, end);
+		}
+		return  count_pairs(str, len, start + 1, end + 1);
+	}
+	
 }
 
 int count_pairs_wrapper(char *str,int len){
     //Wrapper function which might call a recursive function ,which might take extra parameters .
-	return 0;
-
+	int result = 0;
+	//printf("\nstr-%s", str);
+	if (len < 3){
+		return result;
+	}
+	else{
+		result = count_pairs(str, len, 0, 2);
+		//printf("\nres-%d", result);
+		return result;
+	}
 }
 
 

@@ -29,7 +29,6 @@ int main(){
 	int check=path_exists(&maze[0][0], m, n, x1, y1, x2, y2);
 	printf("%d\n", check);
 	*/
-
 	
 	return 0;
 }

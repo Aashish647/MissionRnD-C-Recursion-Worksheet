@@ -59,7 +59,7 @@ namespace spec
 		[TestMethod, Timeout(3000)]
 		void ZeroString()
 		{
-			int pairs=count_pairs_wrapper("", 0);
+			int pairs = count_pairs_wrapper("", 0);
 			Assert::AreEqual(0, pairs, L"0 Str pairs should be 0", 1, 2);
 		}
 		[TestMethod, Timeout(3000)]
@@ -77,7 +77,7 @@ namespace spec
 		[TestMethod, Timeout(3000)]
 		void SmallString3()
 		{
-			int pairs = count_pairs_wrapper("ababa",5);
+			int pairs = count_pairs_wrapper("ababa", 5);
 			Assert::AreEqual(3, pairs, L"0 Str pairs should be 3", 1, 2);
 		}
 		[TestMethod, Timeout(3000)]
@@ -86,6 +86,5 @@ namespace spec
 			int pairs = count_pairs_wrapper("abababababxxxyyy", 16);
 			Assert::AreEqual(10, pairs, L"abababababxxxyyy Str pairs should be 10", 1, 2);
 		}
-
 	};
 }

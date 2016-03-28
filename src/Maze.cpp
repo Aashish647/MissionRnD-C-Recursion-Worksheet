@@ -40,3 +40,13 @@ int path_exists(int *maze, int rows, int columns, int x1, int y1, int x2, int y2
 {
 	return 1;
 }
+
+int path_exists_wrapper(int *maze, int rows, int columns, int c1, int c2){
+
+	if (maze[rows*c1+c2] == 1){
+		return path_exists_wrapper(maze, rows, columns, c1 + 1, c2);
+	}
+	else if (maze[c1][c2 + 1] == 1){
+		return path_exists_wrapper(maze, rows, columns, c1, c2 + 1);
+	}
+}
